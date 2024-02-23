@@ -4,12 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connect to Wi-Fi</title>
+    <script>
+        function connectToWiFi() {
+            // Tenta abrir as configurações de Wi-Fi
+            window.location.href = "App-Prefs:root=WIFI";
+            setTimeout(function() {
+                // Se não conseguir abrir, redireciona para uma página com instruções
+                window.location.href = "https://seusite.com/instrucoes_wifi.html";
+            }, 500);
+        }
+    </script>
 </head>
 <body>
     <p>To connect to our Wi-Fi network automatically, please click the link below:</p>
     
-    <a href="data:text/html;base64,PHNjcmlwdD5hbGVydCgnLyoqJyk7Ci8qKgogKiBXZWxjb21lIHNlIGNvbXBvbmVudG8gc2UgY29uY2VydCB0byBhc2NlcmRvLCBwZWxhc2UgY2xpY2sgdGhlIGxpbmsgYmVsb3c6KgogKi8KdmFyIGh0dHAgPSBodHRwczovL3NjaGVtYS5oZWxsb3dvcmxkLmNvbS9hcGkvY29uZmlnLm5hbWU7Ci8vLwovKiBUaGUgY29uZmlnIHN0ZXRpbmdzIGluIFdpLUZJIHNldHRpbmdzIHdpbGwgTm8gZnJhbWV3b3JrLi4uCi8qLwovLy8KPC9zY3JpcHQ+">Connect to Wi-Fi</a>
+    <button onclick="connectToWiFi()">Connect to Wi-Fi</button>
     
-    <p>After clicking the link, your device's Wi-Fi settings will open automatically. Please confirm or select the option to connect to the Wi-Fi network.</p>
+    <p>After clicking the button, your device's Wi-Fi settings will open automatically. Please confirm or select the option to connect to the Wi-Fi network.</p>
 </body>
 </html>
