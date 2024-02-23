@@ -4,22 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connect to Wi-Fi</title>
-    <script>
-        function connectToWiFi() {
-            // Tenta abrir as configurações de Wi-Fi
-            window.location.href = "App-Prefs:root=WIFI";
-            setTimeout(function() {
-                // Se não conseguir abrir, redireciona para uma página com instruções
-                window.location.href = "https://seusite.com/instrucoes_wifi.html";
-            }, 500);
-        }
-    </script>
 </head>
 <body>
-    <p>To connect to our Wi-Fi network automatically, please click the link below:</p>
+    <h1>Connect to Wi-Fi</h1>
+    <p>To connect to our Wi-Fi network, please follow these steps:</p>
     
-    <button onclick="connectToWiFi()">Connect to Wi-Fi</button>
+    <ol>
+        <li>Open the Wi-Fi settings on your device.</li>
+        <li>Find the network named <strong>Doppo</strong> and select it.</li>
+        <li>Enter the password <strong>Doppo2022</strong> when prompted.</li>
+        <li>Wait for your device to connect to the network.</li>
+    </ol>
     
-    <p>After clicking the button, your device's Wi-Fi settings will open automatically. Please confirm or select the option to connect to the Wi-Fi network.</p>
+    <p>If you need further assistance, please don't hesitate to contact us.</p>
 </body>
 </html>
