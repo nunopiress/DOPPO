@@ -9,7 +9,7 @@
             background-color: #e5dfdf;
             color: #7c9a82;
             text-align: center;
-            font-family: Arial, sans-serif;
+            font-family: 'DM Sans', Arial, sans-serif; /* Adicionando 'DM Sans' como a fonte principal */
         }
         .container {
             padding: 20px;
@@ -17,15 +17,19 @@
         a {
             color: #7c9a82;
             text-decoration: none;
+            font-weight: bold; /* Tornando o texto do link em negrito */
+        }
+        p strong { /* Adicionando negrito às palavras dentro de parágrafos */
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>DOPPO Wi-Fi</h1>
-        <p>Nome da Rede Wi-Fi: Doppo</p>
-        <p>Password: Doppo2022</p>
-        <p>Para voltar ao menu, clique <a href="https://linktr.ee/MenuDoppo">aqui</a>.</p>
+        <p><strong>Nome da Rede Wi-Fi:</strong> Doppo</p> <!-- Adicionando negrito -->
+        <p><strong>Password:</strong> Doppo2022</p> <!-- Adicionando negrito -->
+        <p>Para voltar ao menu, <a href="https://linktr.ee/MenuDoppo">clique <strong>aqui</strong></a>.</p> <!-- Adicionando negrito ao "aqui" -->
     </div>
 </body>
 </html>
