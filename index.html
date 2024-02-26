@@ -21,6 +21,28 @@
         p {
             margin-top: 20px; /* Margem superior para o parágrafo */
         }
+
+        .store-buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .store-button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            background-color: #7C9981;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+
+        .store-button:hover {
+            background-color: #5d7365;
+        }
     </style>
 </head>
 <body>
@@ -40,13 +62,21 @@
                 // Redirecionar para a Apple App Store
                 window.location.href = "https://apps.apple.com/pt/app/apple-store/id375380948";
             } else {
-                // Se o sistema operacional não for Android ou iOS, você pode adicionar um comportamento padrão ou mensagem.
-                alert("Desculpa, o teu dispositivo não é suportado para download direto. Apenas disponível para iOS ou Android.");
+                // Mostrar mensagem e botões de escolha manual
+                document.getElementById("mensagem-manual").style.display = "block";
+                document.getElementById("store-buttons").style.display = "flex";
             }
         }
 
         // Chamar a função de detecção ao carregar a página
         detectarSistemaOperacional();
     </script>
+
+    <!-- Mensagem e botões de escolha manual -->
+    <p id="mensagem-manual" style="display: none;">Se não foste redirecionado para nenhuma App Store, escolhe manualmente iOS ou Android.</p>
+    <div id="store-buttons" class="store-buttons" style="display: none;">
+        <a class="store-button" href="https://apps.apple.com/pt/app/apple-store/id375380948" target="_blank">iOS</a>
+        <a class="store-button" href="https://play.google.com/store/apps/details?id=dev.pinkroom.doppo.android&pcampaignid=web_share&pli=1p" target="_blank">Android</a>
+    </div>
 </body>
 </html>
