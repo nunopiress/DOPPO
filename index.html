@@ -7,19 +7,24 @@
     <title>Doppo APP</title>
     <style>
         body {
-            background-color: #E5DFDF; /* Cor de fundo */
-            font-family: 'DM Sans', sans-serif; /* Tipo de letra */
-            color: #7C9981; /* Cor do texto */
-            text-align: center; /* Alinhamento do texto */
-            padding: 20px; /* Espaçamento interno */
+            background-color: #E5DFDF;
+            font-family: 'DM Sans', sans-serif;
+            color: #7C9981;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+            box-sizing: border-box;
         }
 
         h1 {
-            color: #7C9981; /* Cor do título */
+            color: #7C9981;
+            font-size: 2em;
+            margin-bottom: 20px;
         }
 
         p {
-            margin-top: 20px; /* Margem superior para o parágrafo */
+            margin-top: 10px;
+            font-size: 1.2em;
         }
 
         .store-buttons {
@@ -47,30 +52,26 @@
 </head>
 <body>
     <h1>App Doppo</h1>
+    
+    <p>Por favor, aguarde enquanto te redirecionamos para a loja de aplicativos.</p>
 
     <script>
-        // Função para detectar o sistema operacional do usuário
         function detectarSistemaOperacional() {
             const userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
             if (/android/i.test(userAgent)) {
-                // Redirecionar para a Google Play Store
                 window.location.href = "https://play.google.com/store/apps/details?id=dev.pinkroom.doppo.android&pcampaignid=web_share&pli=1p";
             } else if (/iPad|iPhone|iPod/i.test(userAgent) && !window.MSStream) {
-                // Redirecionar para a Apple App Store
                 window.location.href = "https://apps.apple.com/pt/app/apple-store/id375380948";
             } else {
-                // Mostrar mensagem e botões de escolha manual
                 document.getElementById("mensagem-manual").style.display = "block";
                 document.getElementById("store-buttons").style.display = "flex";
             }
         }
 
-        // Chamar a função de detecção ao carregar a página
         detectarSistemaOperacional();
     </script>
 
-    <!-- Mensagem e botões de escolha manual -->
     <p id="mensagem-manual" style="display: none;">Se não foste redirecionado para nenhuma App Store, escolhe manualmente iOS ou Android.</p>
     <div id="store-buttons" class="store-buttons" style="display: none;">
         <a class="store-button" href="https://apps.apple.com/pt/app/apple-store/id375380948" target="_blank">iOS</a>
