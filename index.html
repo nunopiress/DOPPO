@@ -5,11 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doppo APP</title>
+    <style>
+        body {
+            background-color: #E5DFDF; /* Cor de fundo */
+            font-family: 'DM Sans', sans-serif; /* Tipo de letra */
+            color: #7C9981; /* Cor do texto */
+            text-align: center; /* Alinhamento do texto */
+            padding: 20px; /* Espaçamento interno */
+        }
+
+        h1 {
+            color: #7C9981; /* Cor do título */
+        }
+
+        p {
+            margin-top: 20px; /* Margem superior para o parágrafo */
+        }
+    </style>
 </head>
 <body>
-    <h1>app Doppo</h1>
+    <h1>App Doppo</h1>
     
-    <p>Por favor, aguarda enquanto te redirecionamos para a store</p>
+    <p>Por favor, aguarde enquanto te redirecionamos para a loja de aplicativos.</p>
 
     <script>
         // Função para detectar o sistema operacional do usuário
@@ -24,7 +41,7 @@
                 window.location.href = "https://apps.apple.com/pt/app/apple-store/id375380948";
             } else {
                 // Se o sistema operacional não for Android ou iOS, você pode adicionar um comportamento padrão ou mensagem.
-                alert("Desculpa, o teu dispositivo não é suportado para download direto. Apenas disponivel para iOS ou Android.");
+                alert("Desculpa, o teu dispositivo não é suportado para download direto. Apenas disponível para iOS ou Android.");
             }
         }
 
