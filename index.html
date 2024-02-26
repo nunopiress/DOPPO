@@ -2,41 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOPPO Wi-Fi</title>
-    <style>
-        body {
-            background-color: #e5dfdf;
-            color: #7c9a82;
-            text-align: center;
-            font-family: 'DM Sans', Arial, sans-serif; /* Adicionando 'DM Sans' como a fonte principal */
-        }
-        .container {
-            padding: 20px;
-            text-align: center;
-        }
-        a {
-            color: #7c9a82;
-            text-decoration: none;
-            font-weight: bold; /* Tornando o texto do link em negrito */
-        }
-        p strong { /* Adicionando negrito às palavras dentro de parágrafos */
-            font-weight: bold;
-        }
-        .text-right {
-            text-align: right; /* Alinhamento à direita */
-        }
-        .text-left {
-            text-align: left; /* Alinhamento à esquerda */
-        }
-        .text-center {
-            text-align: center; /* Alinhamento centralizado */
-        }
-    </style>
+    <title>Doppo APP</title>
 </head>
 <body>
-    <div class="container">
-        <h1>DOPPO Wi-Fi</h1>
+    <h1>app Doppo</h1>
+    
+    <p>Por favor, aguarda enquanto te redirecionamos para a store</p>
+
+    <script>
+        // Função para detectar o sistema operacional do usuário
+        function detectarSistemaOperacional() {
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            if (/android/i.test(userAgent)) {
+                // Redirecionar para a Google Play Store
+                window.location.href = "https://play.google.com/store/apps/details?id=dev.pinkroom.doppo.android&pcampaignid=web_share&pli=1p";
+            } else if (/iPad|iPhone|iPod/i.test(userAgent) && !window.MSStream) {
+                // Redirecionar para a Apple App Store
+                window.location.href = "https://apps.apple.com/pt/app/apple-store/id375380948";
+            } else {
+                // Se o sistema operacional não for Android ou iOS, você pode adicionar um comportamento padrão ou mensagem.
+                alert("Desculpa, o teu dispositivo não é suportado para download direto. Apenas disponivel para iOS ou Android.");
+            }
+        }
+
+        // Chamar a função de detecção ao carregar a página
+        detectarSistemaOperacional();
+    </script>
+</body>
+</html>
         <p><strong>Nome da Rede Wi-Fi:</strong> Doppo</p> <!-- Adicionando negrito -->
         <p><strong>Password:</strong> Doppo2022</p> <!-- Adicionando negrito -->
         <p class="text-center">Para voltar ao menu, <a href="https://linktr.ee/MenuDoppo">clique <strong>aqui</strong></a>.</p> <!-- Adicionando negrito ao "aqui" -->
