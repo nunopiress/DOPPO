@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registos</title>
+    <style>
+        body {
+            background-color: #E5DFDF;
+            font-family: 'Trebuchet MS', sans-serif;
+            color: #7C9981;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #7C9981;
+            font-size: 200%; /* 3 vezes maior */
+        }
+
+        .button-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        button {
+            flex: 1;
+            padding: 20px;
+            background-color: #7C9981;
+            color: #E5DFDF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 200%; /* 3 vezes maior */
+        }
+    </style>
+</head>
+<body>
+    <h1>Escolhe o Tipo de Registo</h1>
+
+    <div class="button-container">
+        <button onclick="window.location.href='https://forms.gle/xVxjnPnsdbXwcM6m7'">Registo de Limpeza</button>
+        <button onclick="window.location.href='https://forms.gle/ynGKM59FhJ1fJZfp7'">Registo de Temperaturas</button>
+    </div>
+</body>
+</html>
